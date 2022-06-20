@@ -57,15 +57,15 @@ export class SimulacaoComponent implements OnInit {
     this.mostraCard = true;
     let result = equipamento / 1000;
 
-    if (parseInt(bandeira) == 1) {
+    if (parseInt(bandeira) == 5) {
       this.mensagem = 'O valor da simulação na Bandeira Verde ficou em aproximadamente: R$' + Math.round(((0.59266 * result) / 60) * parseInt(minutos));
-    }else if (parseInt(bandeira) == 2) {
+    }else if (parseInt(bandeira) == 6) {
       let acrescimo = (result * 0.01874);
       this.mensagem = 'O valor da simulação na Bandeira Amarela ficou em aproximadamente: R$' + Math.round(acrescimo + (((0.59266 * result) / 60) * parseInt(minutos)));
-    }else if (parseInt(bandeira) == 3) {
+    }else if (parseInt(bandeira) == 7) {
       let acrescimo = (result * 0.03971);
       this.mensagem = 'O valor da simulação na Bandeira Vermelha I ficou em aproximadamente: R$' + Math.round(acrescimo + (((0.59266 * result) / 60) * parseInt(minutos)));
-    } else if (parseInt(bandeira) == 4) {
+    } else if (parseInt(bandeira) == 8) {
       let acrescimo = (result * 0.09492);
       this.mensagem = 'O valor da simulação na Bandeira Vermelha II ficou em aproximadamente: R$' + Math.round(acrescimo + (((0.59266 * result) / 60) * parseInt(minutos)));
     }
